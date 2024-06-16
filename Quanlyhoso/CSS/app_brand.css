@@ -1,0 +1,13 @@
+﻿.app-brand {
+    display: flex;
+    justify-content: center; /* Canh giữa theo chiều ngang */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    height: 100px; /* Điều chỉnh chiều cao của vùng chứa logo */
+    margin-top :20px;
+}
+
+.app-brand-logo {
+    width: 100px; /* Điều chỉnh kích thước của logo nếu cần thiết */
+    height: auto; /* Đảm bảo tỉ lệ khung hình bảo toàn */
+    /* Các thiết lập khác cho logo */
+}

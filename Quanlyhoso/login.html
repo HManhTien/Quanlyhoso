@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập Quản Lý Hồ Sơ</title>
+    <link href="lib_jcomfim/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib_jcomfim/jquery-confirm.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Load JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="lib_jcomfim/jquery-confirm.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
+    <link href="CSS/css1.css" rel="stylesheet" />
+    <script src="java/code_login.js"></script>
+    <script src="java/ttnguoidung.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Quản Lý Hồ Sơ TUNT</h2>
+            <form id="loginForm">
+                <div class="textbox">
+                    <span class="material-icons">person</span>
+                    <input class="input-tentaikhoan" type="text" placeholder="Tài Khoản" name="username" required>
+                </div>
+                <div class="textbox">
+                    <span class="material-icons">lock</span>
+                    <input class="input-matkhau" type="password" id="password" placeholder="Mật Khẩu" name="password" required>
+                    <span class="material-icons" id="togglePassword" style="cursor: pointer;">visibility</span>
+                </div>
+                <div class="button-row">
+                    <button type="submit" class="btn btn-dangnhap">Đăng Nhập</button>
+                    <a href="/register" class="btn btn-dangky">Đăng Ký</a>
+                </div>
+            </form>
+            <a href="/forgot-password" class="link">Quên Mật Khẩu?</a>
+        </div>
+    </div>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            // Toggle the visibility icon
+            this.textContent = this.textContent === 'visibility' ? 'visibility_off' : 'visibility';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿.menu-link {
+   
+    align-items: center; /* Canh các phần tử theo chiều dọc */
+    text-decoration: none; /* Loại bỏ gạch chân khi hover */
+    color: #333; /* Màu chữ */
+}
+
+.menu-icon {
+    font-size: 24px; /* Kích thước biểu tượng */
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+    color: #007bff; /* Màu sắc của biểu tượng */
+}

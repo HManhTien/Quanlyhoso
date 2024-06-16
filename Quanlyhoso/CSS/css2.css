@@ -1,0 +1,122 @@
+﻿/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif; /* Sử dụng font Public Sans */
+    background-color: #f4f4f4; /* Màu nền */
+    color: #333; /* Màu chữ chính */
+    line-height: 1.6;
+}
+
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.layout-container {
+    display: flex;
+    flex: 1;
+    overflow-x: hidden;
+}
+
+.layout-page {
+    flex: 1;
+    padding: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-link {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: #e0e0e0;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.menu-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.menu-sub {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.menu-item.open .menu-sub {
+    display: block;
+}
+
+.content-main {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content-main h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-main p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.app-brand-text {
+    color: #007bff; /* Màu của thương hiệu */
+    font-size: 24px;
+}
+
+.menu-header {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.menu-header-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Các lựa chọn cụ thể cho từng menu-icon */
+.menu .tf-icons {
+    color: #007bff; /* Màu icon */
+}
+
+.menu .tf-icons:hover {
+    color: #0056b3; /* Màu icon khi hover */
+}
+
+/* Thiết lập màu viền cho menu */
+.menu-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}

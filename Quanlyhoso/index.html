@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Dashboard</title>
+    <meta name="description" content="" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link href="CSS/css2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+
+    <link href="lib_jcomfim/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib_jcomfim/jquery-confirm.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Load JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="lib_jcomfim/jquery-confirm.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+
+    <script src="java/code_login.js"></script>
+    <script src="java/Mycode.js"></script>
+</head>
+<body>
+    
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <!-- Menu -->
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <link href="CSS/app_brand.css" rel="stylesheet" />
+                <div class="app-brand demo">
+                    <a href="https://tnut.edu.vn/" class="app-brand-link">
+                        <img src="IMG/logotnut.png" alt="Logo" class="app-brand-logo">
+                    </a>
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+                <link href="CSS/trangchu.css" rel="stylesheet" />
+                <ul class="menu-inner py-1">
+                    <!-- Dashboard -->
+                    <li class="menu-item active">
+                        <a href="index.html" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <div data-i18n="Analytics">Trang chủ</div>
+                        </a>
+                    </li>
+
+                    <!-- Layouts -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bx-chalkboard'></i>
+                            <div data-i18n="Account Settings">Đề thi</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="lichgiang_page.html" class="menu-link">
+                                    <div data-i18n="Account">   - Xem lịch giảng dạy</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="setting-lichgiang_page.html" class="menu-link">
+                                    <div data-i18n="Notifications"> - Thiết lập lịch giảng dạy</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon tf-icons bx bxs-school'></i>
+                            <div data-i18n="Account Settings">Thông tin lớp học</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item" id="get-class_page">
+                                <a href="get-class_page.html" class="menu-link">
+                                    <div data-i18n="Account">Xem lớp học</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="setting-class_page.html" class="menu-link">
+                                    <div data-i18n="Notifications">Thiết lập lớp học</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Buổi học -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-book"></i>
+                            <div data-i18n="User interface">Tổ hợp đề thi</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="buoihoc_page.html" class="menu-link">
+                                    <div data-i18n="Accordion">xem và sửa</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="create-buoihoc_page.html" class="menu-link">
+                                    <div data-i18n="Alerts">Thiết lậpc</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Extended components -->
+                    <li class="menu-item">
+                        <a href="javascript:void(0)" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-stats"></i>
+                            <div data-i18n="Extended UI">Môn học</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a  class="menu-link btn-monhoc">
+                                    <div data-i18n="Perfect Scrollbar">Danh sách môn học</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a  class="menu-link btn-nganhangcauhoi">
+                                    <div data-i18n="Text Divider">Ngân hàng câu hỏi</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="mark-buoihoc_page.html" class="menu-link">
+                                    <div data-i18n="Text Divider">Điểm kiểm tra</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <div class="layout-page">
+                <div class="content-wrapper">  
+                    <script src="java/ttnguoidung.js"></script>
+                    <link href="CSS/css3.css" rel="stylesheet" />
+                    <div class="header">
+                        <div class="search-container">
+                            <input type="text" id="search-input" placeholder="Tìm kiếm...">
+                            <button type="button" id="search-button">Tìm kiếm</button>
+                        </div>
+                        <div class="avatar-container">
+                            <img src="IMG/avatar1.png" alt="Avatar" id="avatar" style="max-width :50px;">     
+                        </div>
+
+                        <div id="user-info" class="user-info">
+                            
+                        </div>
+                    </div>
+
+                    <!--noi dung-->
+                   <div class="noi-dung-1">
+                       <img src="IMG/anhtrangchu.png"  style="max-width:97%"/>
+                   </div>
+                </div>     
+            </div>
+          
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.menu-toggle').forEach(function (menuToggle) {
+            menuToggle.addEventListener('click', function () {
+                var menuItem = this.parentNode;
+                menuItem.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
